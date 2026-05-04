@@ -1,1 +1,1 @@
-# t1_Bioinformatica
+Trabalho semestral de Bioinformatica
