@@ -87,10 +87,10 @@ plt.title('Heatmap de Média de % Identidade por Ano e Posição Genômica')
 plt.xlabel('Posição Genômica (nt)')
 plt.ylabel('Ano Alvo')
 # Ajustar os ticks do eixo X para melhor legibilidade
-max_pos = pident_heatmap_df.columns.max()
-posicoes_ticks = np.arange(0, len(pident_heatmap_df.columns), 2500)
-bases_por_coluna = max_pos / len(pident_heatmap_df.columns)
-labels_ticks = (posicoes_ticks * bases_por_coluna).astype(int)
+intervalo = 5000
+colunas = pident_heatmap_df.columns.values
+labels_ticks = np.arange(0, colunas.max() + intervalo, intervalo).astype(int)
+posicoes_ticks = [np.argmin(np.abs(colunas - x)) for x in labels_ticks]
 plt.xticks(posicoes_ticks, labels_ticks, rotation=45)
 plt.tight_layout()
 texto_do_titulo = plt.gca().get_title()
@@ -115,7 +115,7 @@ sns.heatmap(
     heatmap_data, 
     annot=True, 
     fmt=".3f", 
-    cmap='RdYlBu_r', # Mais próximo do "Azul -> Vermelho" do seu título
+    cmap='RdYlBu',
     vmin=99.5, 
     vmax=100, 
     linewidths=.5,   # Adiciona uma linha fina entre os quadrados para clareza
@@ -139,7 +139,6 @@ sns.heatmap(
     linewidths=.5,   # Adiciona uma linha fina entre os quadrados para clareza
     cbar_kws={'label': '% Identidade Média'}
 )
-plt.title("Similaridade Temporal SARS-CoV-2", fontsize=14, pad=20)
 
 # --- MISMATCHES ---
 

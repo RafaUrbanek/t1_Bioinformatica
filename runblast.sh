@@ -28,7 +28,7 @@ GOUT="$OUT_DIR/graphs/$SEQ"
 # --- Lógica de limpeza ---
 if [[ "$1" == "clean" ]]; then
     echo "Removendo resultados..."
-    rm -rf "$OUT_DIR"/*
+    rm -rf "$OUT_DIR"/graphs/*
     exit 0
 fi
 
