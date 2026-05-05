@@ -1,10 +1,10 @@
-# 🧬 Trabalho Semestral de Bioinformática
+#  Trabalho Semestral de Bioinformática
 
 Este projeto automatiza a análise de sequências de nucleotídeos do vírus SARS-CoV-2 (COVID-19) coletadas no Brasil, utilizando scripts Python e ferramentas de alinhamento como o BLAST.
 
 ---
 
-## 🛠️ Requisitos Técnicos
+##  Requisitos Técnicos
 
 Para executar este projeto, você precisará do **Python 3.11** e da ferramenta **blastn** instalada no seu sistema (via BLAST+ do NCBI).
 
@@ -14,7 +14,7 @@ O projeto utiliza bibliotecas para manipulação de dados biológicos e visualiz
 *   **Processamento de Dados:** `numpy`, `pandas`
 *   **Visualização:** `matplotlib`, `seaborn`
 
-## 🚀 Modo de Uso
+##  Modo de Uso
 
 ### 1. Preparação do Banco de Dados
 Para garantir a compatibilidade com os scripts, siga rigorosamente as etapas de coleta no **[NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Severe%20acute%20respiratory%20syndrome%20coronavirus%202,%20taxid:2697049)**:
