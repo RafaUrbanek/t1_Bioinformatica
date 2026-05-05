@@ -87,7 +87,7 @@ plt.title('Heatmap de Média de % Identidade por Ano e Posição Genômica')
 plt.xlabel('Posição Genômica (nt)')
 plt.ylabel('Ano Alvo')
 # Ajustar os ticks do eixo X para melhor legibilidade
-intervalo = 5000
+intervalo = 2500
 colunas = pident_heatmap_df.columns.values
 labels_ticks = np.arange(0, colunas.max() + intervalo, intervalo).astype(int)
 posicoes_ticks = [np.argmin(np.abs(colunas - x)) for x in labels_ticks]

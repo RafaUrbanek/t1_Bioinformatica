@@ -1,0 +1,2 @@
+# Ignora os arquivos .csv por serem muito pesados
+./results/*.csv
