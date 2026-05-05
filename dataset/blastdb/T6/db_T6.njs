@@ -6,7 +6,7 @@
   "description": "./dataset/sequences/formated_T6.fasta",
   "number-of-letters": 4165744,
   "number-of-sequences": 140,
-  "last-updated": "2026-05-03T23:53:00",
+  "last-updated": "2026-05-04T21:47:00",
   "number-of-volumes": 1,
   "bytes-total": 1105276,
   "bytes-to-cache": 1053413,

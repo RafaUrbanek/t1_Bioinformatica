@@ -28,6 +28,9 @@ if not os.path.exists(OUTPUT_PATH):
 cols = ["qseqid", "sseqid", "pident", "length", "mismatch", "gaps", "qstart", "qend", "sstart", "send", "evalue", "bitscore"]
 df = pd.read_csv(args.input, names=cols)
 
+# Filtrando bitscore maior ou igual a 700
+df = df[df["bitscore"] >= 700]
+
 # Tratando o DataFrame
 
 # Pegando os dados do id
